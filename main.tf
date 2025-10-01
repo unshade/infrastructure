@@ -14,13 +14,13 @@ provider "infomaniak" {
 }
 
 resource "infomaniak_kaas" "kaastorama" {
-  public_cloud_id         = 12484
-  public_cloud_project_id = 35668
+  public_cloud_id         = var.public_cloud_id
+  public_cloud_project_id = var.public_cloud_project_id
 
-  name               = "kaastorama"
-  pack_name          = "shared"
-  kubernetes_version = 1.33
-  region             = "dc3-a"
+  name               = var.cluster_name
+  pack_name          = var.pack_name
+  kubernetes_version = var.kubernetes_version
+  region             = var.region
 }
 
 resource "infomaniak_kaas_instance_pool" "create_instance_pool_1" {
