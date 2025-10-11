@@ -43,7 +43,7 @@ resource "helm_release" "sync" {
     { name = "kustomization.spec.interval", value = "5m" },
     { name = "kustomization.spec.prune", value = true },
     { name = "kustomization.spec.wait", value = false },
-    { name = "kustomization.spec.path", value = "flux" },
+    { name = "kustomization.spec.path", value = "flux/clusters/kaastorama" },
     { name = "kustomization.spec.decryption.provider", value = "sops" },
     { name = "kustomization.spec.decryption.secretRef.name", value = "sops-gpg" }
   ]

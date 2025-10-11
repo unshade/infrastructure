@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: flux-system
 
 resources:
-  - helm/jetstack.yaml
+  - ../../infrastructure/repositories.yaml
