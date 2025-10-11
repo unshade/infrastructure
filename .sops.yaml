@@ -1,0 +1,5 @@
+creation_rules:
+  - pgp: >-
+      0838E38422232D44B96B6C7659A7C95E7A016E5A
+    encrypted_regex: '^(data|stringData|secrets)$'
+    path_regex: '.*-sops\.yaml$'

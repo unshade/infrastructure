@@ -39,3 +39,15 @@ variable "region" {
   type        = string
   default     = "dc3-a"
 }
+
+variable "repository_url" {
+  description = "URL of the Git repository"
+  type = string
+  default = "git@github.com:unshade/infrastructure.git"
+}
+
+variable "gpg_private_key" {
+  description = "Path to the GPG private key"
+  type = string
+  default = "files/keys/gpg.asc"
+}

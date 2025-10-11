@@ -9,9 +9,10 @@ terraform {
   }
 }
 
-provider "infomaniak" {
-  token = var.infomaniak.token
-}
+
+# ==========================================
+# KaaStorama Cluster
+# ==========================================
 
 resource "infomaniak_kaas" "kaastorama" {
   public_cloud_id         = var.public_cloud_id
@@ -30,6 +31,16 @@ resource "infomaniak_kaas_instance_pool" "create_instance_pool_1" {
 
   name              = "${infomaniak_kaas.kaastorama.name}-pool-1"
   flavor_name       = "a2-ram4-disk20-perf1"
-  min_instances     = 1
+  min_instances     = 2
+  max_instances     = 3
   availability_zone = "dc3-a-04"
 }
+
+module "flux-bootstrap" {
+  source         = "./modules/flux"
+  repository_url = var.repository_url
+  gpg_private_key = var.gpg_private_key
+
+  cluster_config = infomaniak_kaas.kaastorama.kubeconfig
+}
+
