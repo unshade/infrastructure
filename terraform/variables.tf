@@ -43,7 +43,7 @@ variable "region" {
 variable "repository_url" {
   description = "URL of the Git repository"
   type = string
-  default = "git@github.com:unshade/infrastructure.git"
+  default = "https://github.com/unshade/infrastructure.git"
 }
 
 variable "gpg_private_key" {
