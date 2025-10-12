@@ -4,3 +4,5 @@ namespace: flux-system
 
 resources:
   - ../../infrastructure/repositories.yaml
+
+  - ../../infrastructure/cert-manager.yaml
