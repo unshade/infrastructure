@@ -31,7 +31,7 @@ resource "infomaniak_kaas_instance_pool" "create_instance_pool_1" {
 
   name              = "${infomaniak_kaas.kaastorama.name}-pool-1"
   flavor_name       = "a2-ram4-disk20-perf1"
-  min_instances     = 2
+  min_instances     = 1
   max_instances     = 3
   availability_zone = "dc3-a-04"
 }
