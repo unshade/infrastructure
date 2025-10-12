@@ -6,3 +6,4 @@ resources:
   - ../../infrastructure/repositories.yaml
 
   - ../../infrastructure/cert-manager.yaml
+  - ../../infrastructure/cluster-issuer.yaml
