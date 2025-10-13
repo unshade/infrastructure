@@ -1,0 +1,15 @@
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: EnvoyProxy
+metadata:
+  name: main-config
+  namespace: envoy-system
+spec:
+  mergeGateways: true
+  provider:
+    type: Kubernetes
+    kubernetes:
+      envoyService:
+        annotations:
+          loadbalancer.openstack.org/proxy-protocol: "true"
+          loadbalancer.openstack.org/keep-floatingip: "true"
+        externalTrafficPolicy: Cluster
