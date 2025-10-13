@@ -5,3 +5,4 @@ resources:
   - cluster-issuer.yaml
   - cloudflare-secret-sops.yaml
   - nstnr.yaml
+  - reference.yaml
