@@ -11,3 +11,5 @@ resources:
   - ../../infrastructure/gateway-api-crd.yaml
   - ../../infrastructure/gateway.yaml
   - ../../infrastructure/envoy-gateway.yaml
+
+  - ../../infrastructure/private-bin.yaml
