@@ -5,3 +5,4 @@ resources:
   - namespace.yaml
   - repository.yaml
   - helmrelease.yaml
+  - http-route.yaml

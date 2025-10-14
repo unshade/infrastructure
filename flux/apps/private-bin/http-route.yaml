@@ -14,7 +14,7 @@ spec:
     - backendRefs:
         - group: ""
           kind: Service
-          name: private-bin
+          name: private-bin-privatebin
           port: 80
           weight: 1
       matches:
