@@ -2,12 +2,11 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: vaultwarden
-  namespace: self-hosted
 spec:
   parentRefs:
-  - name: main
-    namespace: envoy-system
-    sectionName: https
+    - name: main
+      namespace: envoy-system
+      sectionName: https
   hostnames:
     - "bitwarden.nstnr.com"
   rules:
