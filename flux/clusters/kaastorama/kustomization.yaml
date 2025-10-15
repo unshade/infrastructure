@@ -13,3 +13,4 @@ resources:
   - ../../infrastructure/envoy-gateway.yaml
 
   - ../../infrastructure/private-bin.yaml
+  - ../../infrastructure/vaultwarden.yaml
