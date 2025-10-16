@@ -3,6 +3,12 @@ kind: Kustomization
 namespace: tailscale
 
 resources:
-  - jellyfin-service.yaml
-  - http-route.yaml
-  - jellyfin-svc.yaml
+  - jellyfin/jellyfin-service.yaml
+  - jellyfin/http-route.yaml
+  - jellyfin/jellyfin-svc.yaml
+
+  - immich/http-route.yaml
+  - immich/immich-svc.yaml
+
+  - overseerr/http-route.yaml
+  - overseerr/overseerr-svc.yaml
