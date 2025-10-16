@@ -14,3 +14,4 @@ resources:
 
   - ../../infrastructure/private-bin.yaml
   - ../../infrastructure/vaultwarden.yaml
+  - ../../infrastructure/tailscale-operator.yaml
