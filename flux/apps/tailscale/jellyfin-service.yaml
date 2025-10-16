@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    tailscale.com/tailnet-fqdn: nas-n.moose-pogona.ts.net
+  name: jellyfin
+spec:
+  externalName: nas-n.moose-pogona.ts.net
+  type: ExternalName

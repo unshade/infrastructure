@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jellyfin-clusterip
+spec:
+  selector:
+    app: 82e8b34a-a2ca-4944-b556-7d9b9b691a18
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8096
