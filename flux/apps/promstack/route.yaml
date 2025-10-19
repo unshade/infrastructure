@@ -1,0 +1,23 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  parentRefs:
+  - name: main
+    namespace: envoy-system
+    sectionName: https
+  hostnames:
+    - "grafana.nstnr.com"
+  rules:
+    - backendRefs:
+        - group: ""
+          kind: Service
+          name: prometheus-grafana
+          port: 80
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /

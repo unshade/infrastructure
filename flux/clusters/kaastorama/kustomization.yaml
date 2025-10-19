@@ -16,3 +16,5 @@ resources:
   - ../../infrastructure/vaultwarden.yaml
   - ../../infrastructure/tailscale-operator.yaml
   - ../../infrastructure/tailscale.yaml
+
+  - ../../infrastructure/promstack.yaml
